@@ -48,21 +48,21 @@ git clone https://github.com/yawwn/push_swap push_swap
 cd push_swap
 make
 
+If you want to run push_swap:
+ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG;
+
+If you want to run checker:
+ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG
+```
 push_swap returns a list of commands to sort data. 
 
 checker read instructions on the standard input, each instruction
 followed by ’\n’. Once all the instructions have been read, checker will
 execute them on the stack received as an argument and display "OK", if stack was sorted.
 
-If you want to run push_swap:
-ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG;
-
-If you want to run checker:
-ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG
-
 As a bonus you can see step by step visualization in checker. In order to see it, use -v flag. (e.g. ./checker -v "5 4 3 2 1")
 (Visualizator.png)
-```
+
 ### The algortihm
 
 While the aim of the project was to introduce students to complexity, the project did not actually favour algorithms with lowest complexity. Given that highest marks were achieved by using the least amount of commands, slower algorithms that read the data more times could be more precise than algortihms optimised for speed or least passes over the numbers.
