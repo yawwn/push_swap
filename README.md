@@ -61,7 +61,7 @@ followed by ’\n’. Once all the instructions have been read, checker will
 execute them on the stack received as an argument and display "OK", if stack was sorted.
 
 As a bonus you can see step by step visualization in checker. In order to see it, use -v flag. (e.g. ./checker -v "5 4 3 2 1")
-![Vis](Visualizator.png)
+![Vis](Vis.png)
 
 ### The algortihm
 
